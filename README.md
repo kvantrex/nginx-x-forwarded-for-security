@@ -37,7 +37,7 @@ curl -H "X-Next-Hop: nginx2" http://localhost:8083 \
 Обращение к nginx2 через nginx3\
 curl -H "X-Next-Hop: nginx3" http://localhost:8083
 
-* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста\
+* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста
 
 ## Проверка работы заголовка X-Forwarded-For
 
@@ -50,5 +50,5 @@ curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8082
 Отправка своего заголовка в nginx3\
 curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8083
 
-* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста\
+* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста
 
