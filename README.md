@@ -42,10 +42,10 @@ curl -H "X-Next-Hop: nginx3" http://localhost:8083
 ## Проверка работы заголовка X-Forwarded-For
 
 Отправка своего заголовка в nginx1\
-curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8081 \
+curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8081 
 
 Отправка своего заголовка в nginx2\
-curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8082 \
+curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8082 
 
 Отправка своего заголовка в nginx3\
 curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8083
