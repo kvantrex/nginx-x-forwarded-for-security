@@ -16,39 +16,39 @@
 
 ## Проверка цепочки взаимодействия nginx
 
-Обращение к nginx1
-curl -H "X-Next-Hop: nginx1" http://localhost:8081
-Обращение к nginx2 через nginx1
-curl -H "X-Next-Hop: nginx2" http://localhost:8081
-Обращение к nginx3 через nginx1
-curl -H "X-Next-Hop: nginx3" http://localhost:8081
+Обращение к nginx1\
+curl -H "X-Next-Hop: nginx1" http://localhost:8081\
+Обращение к nginx2 через nginx1\
+curl -H "X-Next-Hop: nginx2" http://localhost:8081\
+Обращение к nginx3 через nginx1\
+curl -H "X-Next-Hop: nginx3" http://localhost:8081\
 
-Обращение к nginx2
-curl -H "X-Next-Hop: nginx2" http://localhost:8082
-Обращение к nginx1 через nginx2
-curl -H "X-Next-Hop: nginx2" http://localhost:8082
-Обращение к nginx3 через nginx2
-curl -H "X-Next-Hop: nginx3" http://localhost:8082
+Обращение к nginx2\
+curl -H "X-Next-Hop: nginx2" http://localhost:8082\
+Обращение к nginx1 через nginx2\
+curl -H "X-Next-Hop: nginx2" http://localhost:8082\
+Обращение к nginx3 через nginx2\
+curl -H "X-Next-Hop: nginx3" http://localhost:8082\
 
-Обращение к nginx3
-curl -H "X-Next-Hop: nginx3" http://localhost:8083
-Обращение к nginx1 через nginx3
-curl -H "X-Next-Hop: nginx2" http://localhost:8083
-Обращение к nginx2 через nginx3
-curl -H "X-Next-Hop: nginx3" http://localhost:8083
+Обращение к nginx3\
+curl -H "X-Next-Hop: nginx3" http://localhost:8083\
+Обращение к nginx1 через nginx3\
+curl -H "X-Next-Hop: nginx2" http://localhost:8083\
+Обращение к nginx2 через nginx3\
+curl -H "X-Next-Hop: nginx3" http://localhost:8083\
 
-* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста
+* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста\
 
 ## Проверка работы заголовка X-Forwarded-For
 
-Отправка своего заголовка в nginx1
-curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8081
+Отправка своего заголовка в nginx1\
+curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8081\
 
-Отправка своего заголовка в nginx2
-curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8082
+Отправка своего заголовка в nginx2\
+curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8082\
 
-Отправка своего заголовка в nginx3
-curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8083
+Отправка своего заголовка в nginx3\
+curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8083\
 
-* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста
+* Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста\
 
