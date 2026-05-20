@@ -17,11 +17,11 @@
 ## Проверка цепочки взаимодействия nginx
 
 Обращение к nginx1\
-curl -H "X-Next-Hop: nginx1" http://localhost:8081\
+curl -H "X-Next-Hop: nginx1" http://localhost:8081 \
 Обращение к nginx2 через nginx1\
-curl -H "X-Next-Hop: nginx2" http://localhost:8081\
+curl -H "X-Next-Hop: nginx2" http://localhost:8081 \
 Обращение к nginx3 через nginx1\
-curl -H "X-Next-Hop: nginx3" http://localhost:8081\
+curl -H "X-Next-Hop: nginx3" http://localhost:8081 \
 
 Обращение к nginx2\
 curl -H "X-Next-Hop: nginx2" http://localhost:8082\
