@@ -52,3 +52,14 @@ curl -H "X-Forwarded-For: 8.8.8.8" http://localhost:8083
 
 * Вместо localhost можно использовать IP адрес сервера и тестировать с удаленного хоста
 
+## Комбинированная проверка
+
+curl -s -H "X-Next-Hop: nginx2" -H "X-Forwarded-For: 8.8.8.8" http://localhost:8081
+
+* Вместо nginx2 можно указывать значения nginx1 или nginx3. В заголовок X-Forwarded-For указывать любое другое значение
+
+## Проверка на инъекцию маршрута и спуфинг
+
+curl -H "X-Next-Hop: domain.com"  -H "X-Forwarded-For: 9.9.9.9"  http://localhost:8081
+
+* В ответ будет 400 ошибка
